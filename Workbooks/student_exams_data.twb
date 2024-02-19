@@ -1,0 +1,1154 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.24.0112.1233                               -->
+<workbook original-version='18.1' source-build='2023.3.2 (20233.24.0112.1233)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='StudentsPerformance+ (Multiple Connections)' inline='true' name='federated.18jljgb13o5v5l11fow741t616m5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Exam_data' name='excel-direct.0e1ljpb1333e9b12wjyut0wdkm9w'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/vikas/Downloads/Exam_data.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Exam_data2' name='excel-direct.01jqvp316z7kqd12m1xs41q2x6b1'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/vikas/Downloads/Exam_data2.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Exam_Data3' name='textscan.07vbium0d86wx9183j2iw1ifz27i'>
+            <connection class='textscan' cleaning='yes' compat='no' csvFile='/Users/vikas/Downloads/Exam_Data3.csv' dataRefreshTime='' directory='/Users/vikas/Downloads' filename='/var/folders/_8/qn2k4xt16ld4cf0bbsd75z7c0000gn/T/tableau-temp/11kiu3a0daht19174os881uz2mj7/Exam_Data3.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Exam_data4' name='excel-direct.1ub67v913z1s6x10wot5d1u1wtdx'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/vikas/Downloads/Exam_data4.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.07vbium0d86wx9183j2iw1ifz27i' name='Exam_Data3.csv' table='[Exam_Data3#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='Economics' ordinal='0' />
+            <column datatype='integer' name='ROLL NO' ordinal='1' />
+            <column datatype='string' name='Class' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation join='right' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[StudentsPerformance].[ROLL NO]' />
+                <expression op='[Result-1].[ROLL NO]' />
+              </expression>
+            </clause>
+            <relation join='left' type='join'>
+              <clause type='join'>
+                <expression op='='>
+                  <expression op='[StudentsPerformance].[ROLL NO]' />
+                  <expression op='[Result-2].[ROLL NO]' />
+                </expression>
+              </clause>
+              <relation connection='excel-direct.0e1ljpb1333e9b12wjyut0wdkm9w' name='StudentsPerformance' table='[StudentsPerformance$]' type='table'>
+                <columns gridOrigin='A1:G253:no:A1:G253:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Gender' ordinal='0' />
+                  <column datatype='string' name='Class' ordinal='1' />
+                  <column datatype='integer' name='math score' ordinal='2' />
+                  <column datatype='integer' name='physics score' ordinal='3' />
+                  <column datatype='integer' name='English' ordinal='4' />
+                  <column datatype='integer' name='chemistry score' ordinal='5' />
+                  <column datatype='integer' name='ROLL NO' ordinal='6' />
+                </columns>
+              </relation>
+              <relation connection='excel-direct.0e1ljpb1333e9b12wjyut0wdkm9w' name='Result-2' table='[&apos;Result-2$&apos;]' type='table'>
+                <columns gridOrigin='A1:G67:no:A1:G67:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Class' ordinal='0' />
+                  <column datatype='integer' name='math score' ordinal='1' />
+                  <column datatype='integer' name='physics score' ordinal='2' />
+                  <column datatype='integer' name='English' ordinal='3' />
+                  <column datatype='integer' name='chemistry score' ordinal='4' />
+                  <column datatype='integer' name='ROLL NO' ordinal='5' />
+                  <column datatype='string' name='Gender' ordinal='6' />
+                </columns>
+              </relation>
+            </relation>
+            <relation connection='excel-direct.01jqvp316z7kqd12m1xs41q2x6b1' name='Result-1' table='[&apos;Result-1$&apos;]' type='table'>
+              <columns gridOrigin='A1:D319:no:A1:D319:0' header='yes' outcome='6'>
+                <column datatype='integer' name='Social Science' ordinal='0' />
+                <column datatype='integer' name='Computers' ordinal='1' />
+                <column datatype='integer' name='ROLL NO' ordinal='2' />
+                <column datatype='string' name='Class' ordinal='3' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.07vbium0d86wx9183j2iw1ifz27i' name='Exam_Data3.csv' table='[Exam_Data3#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='integer' name='Economics' ordinal='0' />
+              <column datatype='integer' name='ROLL NO' ordinal='1' />
+              <column datatype='string' name='Class' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1ub67v913z1s6x10wot5d1u1wtdx' name='Result-11' table='[&apos;Result-1$&apos;]' type='table'>
+            <columns gridOrigin='A1:C319:no:A1:C319:0' header='yes' outcome='6'>
+              <column datatype='integer' name='ROLL NO' ordinal='0' />
+              <column datatype='integer' name='Hindi' ordinal='1' />
+              <column datatype='string' name='Class' ordinal='2' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Class (Exam_Data3.csv)]' value='[Exam_Data3.csv].[Class]' />
+          <map key='[Class (Result-1)]' value='[Result-1].[Class]' />
+          <map key='[Class (Result-11)]' value='[Result-11].[Class]' />
+          <map key='[Class (Result-2)]' value='[Result-2].[Class]' />
+          <map key='[Class]' value='[StudentsPerformance].[Class]' />
+          <map key='[Computers]' value='[Result-1].[Computers]' />
+          <map key='[Economics]' value='[Exam_Data3.csv].[Economics]' />
+          <map key='[English (Result-2)]' value='[Result-2].[English]' />
+          <map key='[English]' value='[StudentsPerformance].[English]' />
+          <map key='[Gender (Result-2)]' value='[Result-2].[Gender]' />
+          <map key='[Gender]' value='[StudentsPerformance].[Gender]' />
+          <map key='[Hindi]' value='[Result-11].[Hindi]' />
+          <map key='[ROLL NO (Exam_Data3.csv)]' value='[Exam_Data3.csv].[ROLL NO]' />
+          <map key='[ROLL NO (Result-1)]' value='[Result-1].[ROLL NO]' />
+          <map key='[ROLL NO (Result-11)]' value='[Result-11].[ROLL NO]' />
+          <map key='[ROLL NO (Result-2)]' value='[Result-2].[ROLL NO]' />
+          <map key='[ROLL NO]' value='[StudentsPerformance].[ROLL NO]' />
+          <map key='[Social Science]' value='[Result-1].[Social Science]' />
+          <map key='[chemistry score (Result-2)]' value='[Result-2].[chemistry score]' />
+          <map key='[chemistry score]' value='[StudentsPerformance].[chemistry score]' />
+          <map key='[math score (Result-2)]' value='[Result-2].[math score]' />
+          <map key='[math score]' value='[StudentsPerformance].[math score]' />
+          <map key='[physics score (Result-2)]' value='[Result-2].[physics score]' />
+          <map key='[physics score]' value='[StudentsPerformance].[physics score]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[StudentsPerformance]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G253:no:A1:G253:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Result-2]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G67:no:A1:G67:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Result-1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D319:no:A1:D319:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Exam_Data3.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Result-11]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C319:no:A1:C319:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[StudentsPerformance]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Class</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Class]</local-name>
+            <parent-name>[StudentsPerformance]</parent-name>
+            <remote-alias>Class</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>math score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[math score]</local-name>
+            <parent-name>[StudentsPerformance]</parent-name>
+            <remote-alias>math score</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>physics score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[physics score]</local-name>
+            <parent-name>[StudentsPerformance]</parent-name>
+            <remote-alias>physics score</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>English</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[English]</local-name>
+            <parent-name>[StudentsPerformance]</parent-name>
+            <remote-alias>English</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chemistry score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[chemistry score]</local-name>
+            <parent-name>[StudentsPerformance]</parent-name>
+            <remote-alias>chemistry score</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ROLL NO</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ROLL NO]</local-name>
+            <parent-name>[StudentsPerformance]</parent-name>
+            <remote-alias>ROLL NO</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Class</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Class (Result-2)]</local-name>
+            <parent-name>[Result-2]</parent-name>
+            <remote-alias>Class</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>math score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[math score (Result-2)]</local-name>
+            <parent-name>[Result-2]</parent-name>
+            <remote-alias>math score</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>physics score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[physics score (Result-2)]</local-name>
+            <parent-name>[Result-2]</parent-name>
+            <remote-alias>physics score</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>English</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[English (Result-2)]</local-name>
+            <parent-name>[Result-2]</parent-name>
+            <remote-alias>English</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chemistry score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[chemistry score (Result-2)]</local-name>
+            <parent-name>[Result-2]</parent-name>
+            <remote-alias>chemistry score</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ROLL NO</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ROLL NO (Result-2)]</local-name>
+            <parent-name>[Result-2]</parent-name>
+            <remote-alias>ROLL NO</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Gender (Result-2)]</local-name>
+            <parent-name>[Result-2]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Social Science</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Social Science]</local-name>
+            <parent-name>[Result-1]</parent-name>
+            <remote-alias>Social Science</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Computers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Computers]</local-name>
+            <parent-name>[Result-1]</parent-name>
+            <remote-alias>Computers</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ROLL NO</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ROLL NO (Result-1)]</local-name>
+            <parent-name>[Result-1]</parent-name>
+            <remote-alias>ROLL NO</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Class</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Class (Result-1)]</local-name>
+            <parent-name>[Result-1]</parent-name>
+            <remote-alias>Class</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Economics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Economics]</local-name>
+            <parent-name>[Exam_Data3.csv]</parent-name>
+            <remote-alias>Economics</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ROLL NO</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ROLL NO (Exam_Data3.csv)]</local-name>
+            <parent-name>[Exam_Data3.csv]</parent-name>
+            <remote-alias>ROLL NO</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Class</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Class (Exam_Data3.csv)]</local-name>
+            <parent-name>[Exam_Data3.csv]</parent-name>
+            <remote-alias>Class</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ROLL NO</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ROLL NO (Result-11)]</local-name>
+            <parent-name>[Result-11]</parent-name>
+            <remote-alias>ROLL NO</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Result-1_C0740BBC037D46128EF9C7792C0A9417]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hindi</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Hindi]</local-name>
+            <parent-name>[Result-11]</parent-name>
+            <remote-alias>Hindi</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Result-1_C0740BBC037D46128EF9C7792C0A9417]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Class</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Class (Result-11)]</local-name>
+            <parent-name>[Result-11]</parent-name>
+            <remote-alias>Class</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Result-1_C0740BBC037D46128EF9C7792C0A9417]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Class (Exam Data3.csv)' datatype='string' name='[Class (Exam_Data3.csv)]' role='dimension' type='nominal' />
+      <column caption='ROLL NO (Exam Data3.csv)' datatype='integer' name='[ROLL NO (Exam_Data3.csv)]' role='measure' type='quantitative' />
+      <column caption='Roll No' datatype='integer' name='[ROLL NO]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Exam_Data3.csv' datatype='table' name='[__tableau_internal_object_id__].[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Result-11' datatype='table' name='[__tableau_internal_object_id__].[Result-1_C0740BBC037D46128EF9C7792C0A9417]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='StudentsPerformance' datatype='table' name='[__tableau_internal_object_id__].[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]' role='measure' type='quantitative' />
+      <column caption='Chemistry Score' datatype='integer' name='[chemistry score]' role='measure' type='quantitative' />
+      <column caption='Math Score' datatype='integer' name='[math score]' role='measure' type='quantitative' />
+      <column caption='Physics Score' datatype='integer' name='[physics score]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/vikas/Documents/My Tableau Repository/Datasources/StudentsPerformance+ (Multiple Connections).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='02/12/2024 08:55:52 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE' table='[Extract].[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC' table='[Extract].[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]' type='table' />
+            <relation name='Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE' table='[Extract].[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]' type='table' />
+            <relation name='Result-1_C0740BBC037D46128EF9C7792C0A9417' table='[Extract].[Result-1_C0740BBC037D46128EF9C7792C0A9417]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[Class (Exam_Data3.csv)]' value='[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE].[Class]' />
+            <map key='[Class (Result-1)]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[Class]' />
+            <map key='[Class (Result-11)]' value='[Result-1_C0740BBC037D46128EF9C7792C0A9417].[Class]' />
+            <map key='[Class (Result-2)]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[Class1]' />
+            <map key='[Class]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[Class2]' />
+            <map key='[Computers]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[Computers]' />
+            <map key='[Economics]' value='[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE].[Economics]' />
+            <map key='[English (Result-2)]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[English]' />
+            <map key='[English]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[English1]' />
+            <map key='[Gender (Result-2)]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[Gender]' />
+            <map key='[Gender]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[Gender1]' />
+            <map key='[Hindi]' value='[Result-1_C0740BBC037D46128EF9C7792C0A9417].[Hindi]' />
+            <map key='[ROLL NO (Exam_Data3.csv)]' value='[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE].[ROLL NO]' />
+            <map key='[ROLL NO (Result-1)]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[ROLL NO]' />
+            <map key='[ROLL NO (Result-11)]' value='[Result-1_C0740BBC037D46128EF9C7792C0A9417].[ROLL NO]' />
+            <map key='[ROLL NO (Result-2)]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[ROLL NO1]' />
+            <map key='[ROLL NO]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[ROLL NO2]' />
+            <map key='[Social Science]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[Social Science]' />
+            <map key='[chemistry score (Result-2)]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[chemistry score]' />
+            <map key='[chemistry score]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[chemistry score1]' />
+            <map key='[math score (Result-2)]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[math score]' />
+            <map key='[math score]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[math score1]' />
+            <map key='[physics score (Result-2)]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[physics score]' />
+            <map key='[physics score]' value='[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC].[physics score1]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='StudentsPerformance+ (Multiple Connections)' increment-value='%null%' refresh-type='create' rows-inserted='954' timestamp-start='2024-02-12 08:55:51.912' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Gender1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>Gender1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>StudentsPerformance</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Class2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Class]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>Class2</remote-alias>
+              <ordinal>1</ordinal>
+              <family>StudentsPerformance</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>math score1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[math score]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>math score1</remote-alias>
+              <ordinal>2</ordinal>
+              <family>StudentsPerformance</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>physics score1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[physics score]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>physics score1</remote-alias>
+              <ordinal>3</ordinal>
+              <family>StudentsPerformance</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>English1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[English]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>English1</remote-alias>
+              <ordinal>4</ordinal>
+              <family>StudentsPerformance</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>71</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>chemistry score1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[chemistry score]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>chemistry score1</remote-alias>
+              <ordinal>5</ordinal>
+              <family>StudentsPerformance</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>65</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ROLL NO2</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ROLL NO]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>ROLL NO2</remote-alias>
+              <ordinal>6</ordinal>
+              <family>StudentsPerformance</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>253</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Class1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Class (Result-2)]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>Class1</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Result-2</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>math score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[math score (Result-2)]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>math score</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Result-2</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>physics score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[physics score (Result-2)]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>physics score</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Result-2</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>English</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[English (Result-2)]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>English</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Result-2</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>chemistry score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[chemistry score (Result-2)]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>chemistry score</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Result-2</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ROLL NO1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ROLL NO (Result-2)]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>ROLL NO1</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Result-2</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender (Result-2)]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Result-2</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Social Science</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Social Science]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>Social Science</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Result-1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>84</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Computers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Computers]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>Computers</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Result-1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>71</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ROLL NO</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ROLL NO (Result-1)]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>ROLL NO</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Result-1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>318</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Class</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Class (Result-1)]</local-name>
+              <parent-name>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</parent-name>
+              <remote-alias>Class</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Result-1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Economics</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Economics]</local-name>
+              <parent-name>[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]</parent-name>
+              <remote-alias>Economics</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Exam_Data3.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ROLL NO</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ROLL NO (Exam_Data3.csv)]</local-name>
+              <parent-name>[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]</parent-name>
+              <remote-alias>ROLL NO</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Exam_Data3.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>318</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Class</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Class (Exam_Data3.csv)]</local-name>
+              <parent-name>[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]</parent-name>
+              <remote-alias>Class</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Exam_Data3.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ROLL NO</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ROLL NO (Result-11)]</local-name>
+              <parent-name>[Result-1_C0740BBC037D46128EF9C7792C0A9417]</parent-name>
+              <remote-alias>ROLL NO</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Result-11</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>318</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Result-1_C0740BBC037D46128EF9C7792C0A9417]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Hindi</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Hindi]</local-name>
+              <parent-name>[Result-1_C0740BBC037D46128EF9C7792C0A9417]</parent-name>
+              <remote-alias>Hindi</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Result-11</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>81</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Result-1_C0740BBC037D46128EF9C7792C0A9417]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Class</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Class (Result-11)]</local-name>
+              <parent-name>[Result-1_C0740BBC037D46128EF9C7792C0A9417]</parent-name>
+              <remote-alias>Class</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Result-11</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Result-1_C0740BBC037D46128EF9C7792C0A9417]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Exam_Data3.csv' id='Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE'>
+            <properties context=''>
+              <relation connection='textscan.07vbium0d86wx9183j2iw1ifz27i' name='Exam_Data3.csv' table='[Exam_Data3#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='Economics' ordinal='0' />
+                  <column datatype='integer' name='ROLL NO' ordinal='1' />
+                  <column datatype='string' name='Class' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE' table='[Extract].[Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE]' type='table' />
+            </properties>
+          </object>
+          <object caption='Result-11' id='Result-1_C0740BBC037D46128EF9C7792C0A9417'>
+            <properties context=''>
+              <relation connection='excel-direct.1ub67v913z1s6x10wot5d1u1wtdx' name='Result-11' table='[&apos;Result-1$&apos;]' type='table'>
+                <columns gridOrigin='A1:C319:no:A1:C319:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='ROLL NO' ordinal='0' />
+                  <column datatype='integer' name='Hindi' ordinal='1' />
+                  <column datatype='string' name='Class' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Result-1_C0740BBC037D46128EF9C7792C0A9417' table='[Extract].[Result-1_C0740BBC037D46128EF9C7792C0A9417]' type='table' />
+            </properties>
+          </object>
+          <object caption='StudentsPerformance' id='StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC'>
+            <properties context=''>
+              <relation join='right' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[StudentsPerformance].[ROLL NO]' />
+                    <expression op='[Result-1].[ROLL NO]' />
+                  </expression>
+                </clause>
+                <relation join='left' type='join'>
+                  <clause type='join'>
+                    <expression op='='>
+                      <expression op='[StudentsPerformance].[ROLL NO]' />
+                      <expression op='[Result-2].[ROLL NO]' />
+                    </expression>
+                  </clause>
+                  <relation connection='excel-direct.0e1ljpb1333e9b12wjyut0wdkm9w' name='StudentsPerformance' table='[StudentsPerformance$]' type='table'>
+                    <columns gridOrigin='A1:G253:no:A1:G253:0' header='yes' outcome='6'>
+                      <column datatype='string' name='Gender' ordinal='0' />
+                      <column datatype='string' name='Class' ordinal='1' />
+                      <column datatype='integer' name='math score' ordinal='2' />
+                      <column datatype='integer' name='physics score' ordinal='3' />
+                      <column datatype='integer' name='English' ordinal='4' />
+                      <column datatype='integer' name='chemistry score' ordinal='5' />
+                      <column datatype='integer' name='ROLL NO' ordinal='6' />
+                    </columns>
+                  </relation>
+                  <relation connection='excel-direct.0e1ljpb1333e9b12wjyut0wdkm9w' name='Result-2' table='[&apos;Result-2$&apos;]' type='table'>
+                    <columns gridOrigin='A1:G67:no:A1:G67:0' header='yes' outcome='6'>
+                      <column datatype='string' name='Class' ordinal='0' />
+                      <column datatype='integer' name='math score' ordinal='1' />
+                      <column datatype='integer' name='physics score' ordinal='2' />
+                      <column datatype='integer' name='English' ordinal='3' />
+                      <column datatype='integer' name='chemistry score' ordinal='4' />
+                      <column datatype='integer' name='ROLL NO' ordinal='5' />
+                      <column datatype='string' name='Gender' ordinal='6' />
+                    </columns>
+                  </relation>
+                </relation>
+                <relation connection='excel-direct.01jqvp316z7kqd12m1xs41q2x6b1' name='Result-1' table='[&apos;Result-1$&apos;]' type='table'>
+                  <columns gridOrigin='A1:D319:no:A1:D319:0' header='yes' outcome='6'>
+                    <column datatype='integer' name='Social Science' ordinal='0' />
+                    <column datatype='integer' name='Computers' ordinal='1' />
+                    <column datatype='integer' name='ROLL NO' ordinal='2' />
+                    <column datatype='string' name='Class' ordinal='3' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC' table='[Extract].[StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[ROLL NO (Result-1)]' />
+              <expression op='[ROLL NO (Exam_Data3.csv)]' />
+            </expression>
+            <first-end-point object-id='StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC' />
+            <second-end-point object-id='Exam_Data3.csv_AD56ABF1160248F1B3B61EE7FB1E88FE' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[ROLL NO (Result-1)]' />
+              <expression op='[ROLL NO (Result-11)]' />
+            </expression>
+            <first-end-point object-id='StudentsPerformance_CC1CA9B7801D4C5596879E72DCD503EC' />
+            <second-end-point object-id='Result-1_C0740BBC037D46128EF9C7792C0A9417' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C315B3FA-9AA0-4157-BEF9-28A9339AD1DA}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7F39EB4A-64C0-45B8-8A27-279B2443B4E8}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

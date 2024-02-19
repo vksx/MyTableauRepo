@@ -1,0 +1,1609 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.24.0112.1233                               -->
+<workbook original-version='18.1' source-build='2023.3.2 (20233.24.0112.1233)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='DataVizTrainingLab-Titanic' path='/workbooks' revision='1.6' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='titanic' inline='true' name='federated.04d210f0ubtpfm1gjqayx01vo002' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='titanic' name='textscan.08g1ly20zxbenw14yp2lg1hhf3gg'>
+            <connection class='textscan' directory='/Users/vikas/Downloads' filename='titanic.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.08g1ly20zxbenw14yp2lg1hhf3gg' name='titanic.csv' table='[titanic#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='PassengerId' ordinal='0' />
+            <column datatype='integer' name='Survived' ordinal='1' />
+            <column datatype='string' name='Name' ordinal='2' />
+            <column datatype='string' name='Sex' ordinal='3' />
+            <column datatype='real' name='Age' ordinal='4' />
+            <column datatype='integer' name='SibSp' ordinal='5' />
+            <column datatype='integer' name='Parch' ordinal='6' />
+            <column datatype='real' name='Fare' ordinal='7' />
+            <column datatype='string' name='Cabin' ordinal='8' />
+            <column datatype='string' name='Embarked' ordinal='9' />
+            <column datatype='integer' name='Pclass' ordinal='10' />
+            <column datatype='string' name='Ticket' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.08g1ly20zxbenw14yp2lg1hhf3gg' name='titanic.csv' table='[titanic#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='PassengerId' ordinal='0' />
+            <column datatype='integer' name='Survived' ordinal='1' />
+            <column datatype='string' name='Name' ordinal='2' />
+            <column datatype='string' name='Sex' ordinal='3' />
+            <column datatype='real' name='Age' ordinal='4' />
+            <column datatype='integer' name='SibSp' ordinal='5' />
+            <column datatype='integer' name='Parch' ordinal='6' />
+            <column datatype='real' name='Fare' ordinal='7' />
+            <column datatype='string' name='Cabin' ordinal='8' />
+            <column datatype='string' name='Embarked' ordinal='9' />
+            <column datatype='integer' name='Pclass' ordinal='10' />
+            <column datatype='string' name='Ticket' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PassengerId</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PassengerId]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>PassengerId</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Survived</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Survived]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>Survived</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sex]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>Sex</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SibSp</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SibSp]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>SibSp</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Parch</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Parch]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>Parch</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fare</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Fare]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>Fare</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cabin</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Cabin]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>Cabin</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Embarked</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Embarked]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>Embarked</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pclass</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pclass]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>Pclass</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ticket</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Ticket]</local-name>
+            <parent-name>[titanic.csv]</parent-name>
+            <remote-alias>Ticket</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' caption='Age Category' datatype='integer' name='[Age (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='1' formula='[Age]' peg='0' size='10' />
+      </column>
+      <column datatype='real' name='[Age]' role='measure' type='quantitative' />
+      <column caption='Survival Rate' datatype='real' name='[Calculation_1914381738474381313]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Survived]) / COUNTD([PassengerId])' />
+      </column>
+      <column caption='Total Passengers' datatype='integer' name='[Calculation_1914381738480689155]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([PassengerId])' />
+      </column>
+      <column caption='Survived Dimension' datatype='string' name='[Calculation_1914381738484887556]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Survived] = 1 THEN &apos;Survivor&apos; ELSE &apos;Non-Survivor&apos; END' />
+      </column>
+      <column caption='Dummy Axis' datatype='integer' name='[Calculation_1914381738487226373]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MIN(1)' />
+      </column>
+      <column caption='Passenger Id' datatype='integer' name='[PassengerId]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Passenger Ticket Class' datatype='integer' name='[Pclass (copy)_1914381738495528966]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[Pclass]' />
+        <aliases>
+          <alias key='1' value='1st Class' />
+          <alias key='2' value='2nd Class' />
+          <alias key='3' value='3rd Class' />
+        </aliases>
+      </column>
+      <column datatype='string' name='[Sex]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;female&quot;' value='Female' />
+          <alias key='&quot;male&quot;' value='Male' />
+        </aliases>
+      </column>
+      <column caption='Sib Sp' datatype='integer' name='[SibSp]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='titanic.csv' datatype='table' name='[__tableau_internal_object_id__].[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_1914381738484887556]' derivation='None' name='[none:Calculation_1914381738484887556:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='false' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/vikas/Documents/My Tableau Repository/Datasources/federated.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='02/09/2024 11:59:20 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='titanic' increment-value='%null%' refresh-type='create' rows-inserted='891' timestamp-start='2024-02-09 11:59:20.700' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>PassengerId</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[PassengerId]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PassengerId</remote-alias>
+              <ordinal>0</ordinal>
+              <family>titanic.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>891</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Survived</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Survived]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Survived</remote-alias>
+              <ordinal>1</ordinal>
+              <family>titanic.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Name</remote-alias>
+              <ordinal>2</ordinal>
+              <family>titanic.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>891</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sex</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sex]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sex</remote-alias>
+              <ordinal>3</ordinal>
+              <family>titanic.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Age</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Age</remote-alias>
+              <ordinal>4</ordinal>
+              <family>titanic.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>89</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SibSp</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SibSp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SibSp</remote-alias>
+              <ordinal>5</ordinal>
+              <family>titanic.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Parch</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Parch]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Parch</remote-alias>
+              <ordinal>6</ordinal>
+              <family>titanic.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Fare</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Fare]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Fare</remote-alias>
+              <ordinal>7</ordinal>
+              <family>titanic.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cabin</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Cabin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cabin</remote-alias>
+              <ordinal>8</ordinal>
+              <family>titanic.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>148</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Embarked</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Embarked]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Embarked</remote-alias>
+              <ordinal>9</ordinal>
+              <family>titanic.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pclass</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Pclass]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pclass</remote-alias>
+              <ordinal>10</ordinal>
+              <family>titanic.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ticket</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Ticket]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Ticket</remote-alias>
+              <ordinal>11</ordinal>
+              <family>titanic.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>681</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[titanic.csv_FD2385EEB2804E7391D73492C00C7FB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_1914381738484887556:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Non-Survivor&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;non-survivor&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Survivor&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;survivor&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='PassengerId' />
+        <field-sort-custom-order field='Survived' />
+        <field-sort-custom-order field='Survived (copy)_1914381738478678018' />
+        <field-sort-custom-order field='Calculation_1914381738484887556' />
+        <field-sort-custom-order field='Name' />
+        <field-sort-custom-order field='Sex' />
+        <field-sort-custom-order field='Age' />
+        <field-sort-custom-order field='SibSp' />
+        <field-sort-custom-order field='Parch' />
+        <field-sort-custom-order field='Fare' />
+        <field-sort-custom-order field='Cabin' />
+        <field-sort-custom-order field='Embarked' />
+        <field-sort-custom-order field='Pclass' />
+        <field-sort-custom-order field='Pclass (copy)_1914381738495528966' />
+        <field-sort-custom-order field='Ticket' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field='Calculation_1914381738474381313' />
+        <field-sort-custom-order field='Calculation_1914381738480689155' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <filter class='quantitative' column='[Age]' filter-group='2' included-values='in-range'>
+        <min>0.41999999999999998</min>
+        <max>80.0</max>
+      </filter>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='titanic.csv' id='titanic.csv_FD2385EEB2804E7391D73492C00C7FB5'>
+            <properties context=''>
+              <relation connection='textscan.08g1ly20zxbenw14yp2lg1hhf3gg' name='titanic.csv' table='[titanic#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='PassengerId' ordinal='0' />
+                  <column datatype='integer' name='Survived' ordinal='1' />
+                  <column datatype='string' name='Name' ordinal='2' />
+                  <column datatype='string' name='Sex' ordinal='3' />
+                  <column datatype='real' name='Age' ordinal='4' />
+                  <column datatype='integer' name='SibSp' ordinal='5' />
+                  <column datatype='integer' name='Parch' ordinal='6' />
+                  <column datatype='real' name='Fare' ordinal='7' />
+                  <column datatype='string' name='Cabin' ordinal='8' />
+                  <column datatype='string' name='Embarked' ordinal='9' />
+                  <column datatype='integer' name='Pclass' ordinal='10' />
+                  <column datatype='string' name='Ticket' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Distribution of passenger ages'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic' name='federated.04d210f0ubtpfm1gjqayx01vo002' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04d210f0ubtpfm1gjqayx01vo002'>
+            <column aggregation='None' caption='Age Category' datatype='integer' name='[Age (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='1' formula='[Age]' peg='0' size='10' />
+            </column>
+            <column datatype='real' name='[Age]' role='measure' type='quantitative' />
+            <column caption='Passenger Id' datatype='integer' name='[PassengerId]' role='dimension' type='ordinal' />
+            <column-instance column='[PassengerId]' derivation='Count' name='[cnt:PassengerId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PassengerId]' derivation='CountD' name='[ctd:PassengerId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]' scope='rows' value='Passenger Count' />
+            <format attr='title' class='0' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Age (bin):qk]' scope='cols' value='Passenger Age' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Age (bin):qk]' num-steps='10' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]' />
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[cnt:PassengerId:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontsize='16'>&lt;</run>
+                <run bold='true' fontsize='16'>[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]</run>
+                <run bold='true' fontsize='16'>&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='10'>&lt;</run>
+                <run bold='true' fontsize='10'>[federated.04d210f0ubtpfm1gjqayx01vo002].[cnt:PassengerId:qk]</run>
+                <run bold='true' fontsize='10'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]</rows>
+        <cols>[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Age (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.04d210f0ubtpfm1gjqayx01vo002].[Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{DBEC006F-6F04-4854-98F6-1910C1986D68}' />
+    </worksheet>
+    <worksheet name='Distribution of passengers by gender'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic' name='federated.04d210f0ubtpfm1gjqayx01vo002' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04d210f0ubtpfm1gjqayx01vo002'>
+            <column caption='Passenger Id' datatype='integer' name='[PassengerId]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Sex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;female&quot;' value='Female' />
+                <alias key='&quot;male&quot;' value='Male' />
+              </aliases>
+            </column>
+            <column-instance column='[PassengerId]' derivation='Count' name='[cnt:PassengerId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PassengerId]' derivation='CountD' name='[ctd:PassengerId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sex]' derivation='None' name='[none:Sex:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]' scope='rows' value='Passenger Count' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Sex:nk]' />
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[cnt:PassengerId:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontsize='16'>&lt;</run>
+                <run bold='true' fontsize='16'>[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]</run>
+                <run bold='true' fontsize='16'>&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='10'>&lt;</run>
+                <run bold='true' fontsize='10'>[federated.04d210f0ubtpfm1gjqayx01vo002].[cnt:PassengerId:qk]</run>
+                <run bold='true' fontsize='10'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]</rows>
+        <cols>[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Sex:nk]</cols>
+      </table>
+      <simple-id uuid='{A997B02E-9FC2-4156-ABD2-6D11BDF70137}' />
+    </worksheet>
+    <worksheet name='Distribution of passengers by ticket class and survival status'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic' name='federated.04d210f0ubtpfm1gjqayx01vo002' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04d210f0ubtpfm1gjqayx01vo002'>
+            <column caption='Survived Dimension' datatype='string' name='[Calculation_1914381738484887556]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Survived] = 1 THEN &apos;Survivor&apos; ELSE &apos;Non-Survivor&apos; END' />
+            </column>
+            <column caption='Passenger Id' datatype='integer' name='[PassengerId]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Passenger Ticket Class' datatype='integer' name='[Pclass (copy)_1914381738495528966]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[Pclass]' />
+              <aliases>
+                <alias key='1' value='1st Class' />
+                <alias key='2' value='2nd Class' />
+                <alias key='3' value='3rd Class' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Pclass]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Survived]' role='measure' type='quantitative' />
+            <column-instance column='[PassengerId]' derivation='Count' name='[cnt:PassengerId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PassengerId]' derivation='CountD' name='[ctd:PassengerId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1914381738484887556]' derivation='None' name='[none:Calculation_1914381738484887556:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pclass (copy)_1914381738495528966]' derivation='None' name='[none:Pclass (copy)_1914381738495528966:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='border-color' value='#b0b0b0' />
+            <format attr='border-width' value='1' />
+            <format attr='hnaxis' value='true' />
+            <format attr='hnlabel' value='horizontal' />
+            <format attr='title' class='0' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]' scope='rows' value='Passenger Count' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Pclass (copy)_1914381738495528966:ok]' value='true' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Calculation_1914381738484887556:nk]' />
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[cnt:PassengerId:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878' fontsize='12'>Type:&#9;</run>
+                <run bold='true' fontsize='12'><![CDATA[<[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Calculation_1914381738484887556:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878' fontsize='12'>Count:&#9;</run>
+                <run bold='true' fontsize='12'><![CDATA[<[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='10'>&lt;</run>
+                <run bold='true' fontsize='10'>[federated.04d210f0ubtpfm1gjqayx01vo002].[cnt:PassengerId:qk]</run>
+                <run bold='true' fontsize='10'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='aspect' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]</rows>
+        <cols>[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Pclass (copy)_1914381738495528966:ok]</cols>
+      </table>
+      <simple-id uuid='{F53E2D65-B79C-4053-8CDF-F3D01B667E56}' />
+    </worksheet>
+    <worksheet name='Distribution of survivors vs. non-survivors'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic' name='federated.04d210f0ubtpfm1gjqayx01vo002' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04d210f0ubtpfm1gjqayx01vo002'>
+            <column caption='Survived Dimension' datatype='string' name='[Calculation_1914381738484887556]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Survived] = 1 THEN &apos;Survivor&apos; ELSE &apos;Non-Survivor&apos; END' />
+            </column>
+            <column caption='Dummy Axis' datatype='integer' name='[Calculation_1914381738487226373]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MIN(1)' />
+            </column>
+            <column caption='Passenger Id' datatype='integer' name='[PassengerId]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Survived]' role='measure' type='quantitative' />
+            <column-instance column='[PassengerId]' derivation='Count' name='[cnt:PassengerId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PassengerId]' derivation='CountD' name='[ctd:PassengerId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1914381738484887556]' derivation='None' name='[none:Calculation_1914381738484887556:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1914381738487226373]' derivation='User' name='[usr:Calculation_1914381738487226373:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738487226373:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738487226373:qk]' scope='rows' value='false' />
+            <format attr='display' class='1' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738487226373:qk]' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[cnt:PassengerId:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>&lt;</run>
+                <run bold='true' fontalignment='1'>[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]</run>
+                <run bold='true' fontalignment='1'>&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='14'>&lt;</run>
+                <run fontsize='14'>[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Calculation_1914381738484887556:nk]</run>
+                <run fontsize='14'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738487226373:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Calculation_1914381738484887556:nk]' />
+              <wedge-size column='[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]' />
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Calculation_1914381738484887556:nk]' />
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[cnt:PassengerId:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontsize='16'>&lt;</run>
+                <run bold='true' fontalignment='1' fontsize='16'>[federated.04d210f0ubtpfm1gjqayx01vo002].[ctd:PassengerId:qk]</run>
+                <run bold='true' fontalignment='1' fontsize='16'>&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Calculation_1914381738484887556:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.04d210f0ubtpfm1gjqayx01vo002].[cnt:PassengerId:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='4.1456303596496582' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738487226373:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[cnt:PassengerId:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='16'>&lt;</run>
+                <run bold='true' fontsize='16'>[federated.04d210f0ubtpfm1gjqayx01vo002].[cnt:PassengerId:qk]</run>
+                <run bold='true' fontsize='16'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#ffffff' />
+                <format attr='size' value='1.5932043790817261' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738487226373:qk] + [federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738487226373:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{E676F412-5AF2-48B7-BF2D-8B6D2E07353D}' />
+    </worksheet>
+    <worksheet name='Overview'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic' name='federated.04d210f0ubtpfm1gjqayx01vo002' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04d210f0ubtpfm1gjqayx01vo002'>
+            <column caption='Survival Rate' datatype='real' name='[Calculation_1914381738474381313]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Survived]) / COUNTD([PassengerId])' />
+            </column>
+            <column caption='Total Passengers' datatype='integer' name='[Calculation_1914381738480689155]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([PassengerId])' />
+            </column>
+            <column caption='Passenger Id' datatype='integer' name='[PassengerId]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Survived]' role='measure' type='quantitative' />
+            <column-instance column='[Survived]' derivation='Sum' name='[sum:Survived:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1914381738474381313]' derivation='User' name='[usr:Calculation_1914381738474381313:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1914381738480689155]' derivation='User' name='[usr:Calculation_1914381738480689155:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738480689155:qk]' />
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[sum:Survived:qk]' />
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontalignment='0' fontsize='16'>Total Passengers:   </run>
+                <run bold='true' fontalignment='0' fontsize='16'><![CDATA[<[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738480689155:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontsize='12'>Number of Survivors:         </run>
+                <run bold='true' fontalignment='0' fontsize='12'><![CDATA[<[federated.04d210f0ubtpfm1gjqayx01vo002].[sum:Survived:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontsize='12'>Survival Rate:                        </run>
+                <run bold='true' fontalignment='0' fontsize='12'><![CDATA[<[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='0.82359117269515991' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{019E267C-E32F-4989-9DE8-7C96CCB783EC}' />
+    </worksheet>
+    <worksheet name='Survival on basis of gender'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B05C168C-0687-49F3-BAE0-B003E9CB342A}' />
+    </worksheet>
+    <worksheet name='Survival rates by age group and gender'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic' name='federated.04d210f0ubtpfm1gjqayx01vo002' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04d210f0ubtpfm1gjqayx01vo002'>
+            <column aggregation='None' caption='Age Category' datatype='integer' name='[Age (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='1' formula='[Age]' peg='0' size='10' />
+            </column>
+            <column datatype='real' name='[Age]' role='measure' type='quantitative' />
+            <column caption='Survival Rate' datatype='real' name='[Calculation_1914381738474381313]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Survived]) / COUNTD([PassengerId])' />
+            </column>
+            <column caption='Passenger Id' datatype='integer' name='[PassengerId]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Sex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;female&quot;' value='Female' />
+                <alias key='&quot;male&quot;' value='Male' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Survived]' role='measure' type='quantitative' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sex]' derivation='None' name='[none:Sex:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1914381738474381313]' derivation='User' name='[usr:Calculation_1914381738474381313:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1914381738474381313]' derivation='User' name='[usr:Calculation_1914381738474381313:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:ok]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]' />
+              <color column='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Sex:nk]' />
+              <color column='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:ok]' />
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Sex:nk]' />
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Age (bin):qk]' />
+              <text column='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878' fontsize='12'>Age Category:&#9;</run>
+                <run bold='true' fontsize='12'><![CDATA[<[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Age (bin):qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878' fontsize='12'>Sex:&#9;</run>
+                <run bold='true' fontsize='12'><![CDATA[<[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Sex:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878' fontsize='12'>Survival Rate:&#9;</run>
+                <run bold='true' fontsize='12'><![CDATA[<[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{569FC43C-14AE-423F-9892-8A36B59EAA1B}' />
+    </worksheet>
+    <worksheet name='Survival rates by gender'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic' name='federated.04d210f0ubtpfm1gjqayx01vo002' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04d210f0ubtpfm1gjqayx01vo002'>
+            <column caption='Survival Rate' datatype='real' name='[Calculation_1914381738474381313]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Survived]) / COUNTD([PassengerId])' />
+            </column>
+            <column caption='Passenger Id' datatype='integer' name='[PassengerId]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Sex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;female&quot;' value='Female' />
+                <alias key='&quot;male&quot;' value='Male' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Survived]' role='measure' type='quantitative' />
+            <column-instance column='[Sex]' derivation='None' name='[none:Sex:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1914381738474381313]' derivation='User' name='[usr:Calculation_1914381738474381313:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Sex:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontsize='12'>&lt;</run>
+                <run bold='true' fontsize='12'>[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]</run>
+                <run bold='true' fontsize='12'>&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]</rows>
+        <cols>[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Sex:nk]</cols>
+      </table>
+      <simple-id uuid='{F4291C10-2A90-44BD-B9E0-8260AD8CC8F8}' />
+    </worksheet>
+    <worksheet name='Survival rates by passenger class'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanic' name='federated.04d210f0ubtpfm1gjqayx01vo002' />
+          </datasources>
+          <datasource-dependencies datasource='federated.04d210f0ubtpfm1gjqayx01vo002'>
+            <column caption='Survival Rate' datatype='real' name='[Calculation_1914381738474381313]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Survived]) / COUNTD([PassengerId])' />
+            </column>
+            <column caption='Passenger Id' datatype='integer' name='[PassengerId]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Passenger Ticket Class' datatype='integer' name='[Pclass (copy)_1914381738495528966]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[Pclass]' />
+              <aliases>
+                <alias key='1' value='1st Class' />
+                <alias key='2' value='2nd Class' />
+                <alias key='3' value='3rd Class' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Pclass]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Survived]' role='measure' type='quantitative' />
+            <column-instance column='[Pclass (copy)_1914381738495528966]' derivation='None' name='[none:Pclass (copy)_1914381738495528966:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1914381738474381313]' derivation='User' name='[usr:Calculation_1914381738474381313:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Pclass (copy)_1914381738495528966:ok]' value='' />
+            <format attr='text-format' field='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Pclass (copy)_1914381738495528966:ok]' />
+              <tooltip column='[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontsize='12'><![CDATA[<[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Pclass (copy)_1914381738495528966:ok]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.04d210f0ubtpfm1gjqayx01vo002].[usr:Calculation_1914381738474381313:qk]</rows>
+        <cols>[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Pclass (copy)_1914381738495528966:ok]</cols>
+      </table>
+      <simple-id uuid='{8DBDB832-9DCD-4225-9AAD-60E2C4CCF52F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Passenger Overview'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='21' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='15' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+              <zone h='98000' id='6' type-v2='layout-basic' w='98400' x='800' y='1000'>
+                <zone h='17250' id='3' name='Overview' w='39400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='60123' id='5' name='Distribution of survivors vs. non-survivors' w='59000' x='40200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='42875' id='10' name='Distribution of passengers by gender' w='39400' x='800' y='18250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='37875' id='12' name='Distribution of passenger ages' w='39400' x='800' y='61125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='37877' id='13' name='Distribution of passengers by ticket class and survival status' w='59000' x='40200' y='61123'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='57' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='56' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='130' h='17250' id='3' is-fixed='true' name='Overview' w='39400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='60123' id='5' is-fixed='true' name='Distribution of survivors vs. non-survivors' w='59000' x='40200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42875' id='10' is-fixed='true' name='Distribution of passengers by gender' w='39400' x='800' y='18250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37877' id='13' is-fixed='true' name='Distribution of passengers by ticket class and survival status' w='59000' x='40200' y='61123'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37875' id='12' is-fixed='true' name='Distribution of passenger ages' w='39400' x='800' y='61125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5B8FD47B-4277-4D0E-A492-03A410188231}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Survival Analysis'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones />
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='3' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{053240B1-D9E4-4980-9D9A-E3A537841C4C}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Overview'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D6C1C5DF-C457-4FD0-9C4B-7FBA4DE905FF}' />
+    </window>
+    <window class='worksheet' name='Distribution of survivors vs. non-survivors'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Calculation_1914381738484887556:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{4C53F403-1DD7-4802-8570-0B1977BAD946}' />
+    </window>
+    <window class='worksheet' name='Distribution of passengers by gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Sex:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8B917E78-6C6F-4114-ACA0-08030FBE8E0A}' />
+    </window>
+    <window class='worksheet' name='Distribution of passenger ages'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7C01F0BB-8B46-4BB7-A15D-5FAAF41F9C88}' />
+    </window>
+    <window class='worksheet' name='Distribution of passengers by ticket class and survival status'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Calculation_1914381738484887556:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{77D094AA-C4F4-4EF7-8B45-FCE0D5BA8530}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Passenger Overview'>
+      <viewpoints>
+        <viewpoint name='Distribution of passenger ages'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Distribution of passengers by gender'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Distribution of passengers by ticket class and survival status'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Distribution of survivors vs. non-survivors'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Overview' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{2543A7D8-2EBA-4B1B-AC21-B56FD84A1654}' />
+    </window>
+    <window class='worksheet' name='Survival rates by passenger class'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F6D1DCB7-B8BC-4486-9389-4BE211DDAE84}' />
+    </window>
+    <window class='worksheet' name='Survival on basis of gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4FCF7C2D-6397-4347-8AEF-AC86226D4C41}' />
+    </window>
+    <window class='worksheet' name='Survival rates by gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.04d210f0ubtpfm1gjqayx01vo002].[none:Sex:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0836895F-D9A6-4336-964A-4FE21E5F249C}' />
+    </window>
+    <window class='worksheet' name='Survival rates by age group and gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{47C76942-AEE8-48B0-8205-1E59B993552C}' />
+    </window>
+    <window class='dashboard' name='Survival Analysis'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{B023D71F-82E7-4E59-81B8-1901584273FA}' />
+    </window>
+  </windows>
+</workbook>
